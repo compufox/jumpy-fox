@@ -7,10 +7,12 @@
   :version "0.0.1"
   :serial t
   :depends-on (#:trivial-gamekit #:trivial-gamekit-ui #:trivial-gamekit-fistmachine
-               #:trivial-gamekit-colors)
+               #:trivial-gamekit-colors #:trivial-gamekit-sprite)
   :components ((:file "package")
+               (:file "util")
+               (:file "main")
                (:file "resources")
                (:module "states" :serial t
                 :components
-                ())
-               (:file "main")))
+                ((:file "loading")
+                 (:file "game")))))
